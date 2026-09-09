@@ -1,0 +1,28 @@
+
+  
+    
+
+create or replace transient table HEALTHCARE_DB.GOLD.dim_department
+    
+    
+    
+    
+    
+
+    as (WITH source AS (
+    SELECT * FROM HEALTHCARE_DB.SILVER.stg_healthcare
+),
+
+dim_department AS (
+    SELECT DISTINCT
+        department                AS department_name,
+        region
+    FROM source
+)
+
+SELECT * FROM dim_department
+    )
+;
+
+
+  

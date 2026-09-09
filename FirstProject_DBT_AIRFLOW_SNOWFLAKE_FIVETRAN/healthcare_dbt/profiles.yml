@@ -1,0 +1,13 @@
+healthcare_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: HYPPNSV-YC37243
+      user: DBT_USER
+      password: '@SugaViki19971601'
+      role: DBT_ROLE
+      warehouse: HEALTHCARE_WH
+      database: HEALTHCARE_DB
+      schema: SILVER
+      threads: 2

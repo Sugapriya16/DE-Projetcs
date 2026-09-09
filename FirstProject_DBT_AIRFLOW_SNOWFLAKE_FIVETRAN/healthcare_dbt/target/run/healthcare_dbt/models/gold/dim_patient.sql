@@ -1,0 +1,31 @@
+
+  
+    
+
+create or replace transient table HEALTHCARE_DB.GOLD.dim_patient
+    
+    
+    
+    
+    
+
+    as (WITH source AS (
+    SELECT * FROM HEALTHCARE_DB.SILVER.stg_healthcare
+),
+
+dim_patient AS (
+    SELECT DISTINCT
+        patient_id,
+        age_group,
+        gender,
+        region,
+        risk_category
+    FROM source
+)
+
+SELECT * FROM dim_patient
+    )
+;
+
+
+  

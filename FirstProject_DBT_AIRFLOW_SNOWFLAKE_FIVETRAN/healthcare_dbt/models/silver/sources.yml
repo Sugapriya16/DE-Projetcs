@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: HEALTHCARE_DB
+    schema: BRONZE
+    tables:
+      - name: RAW_DATA
+        description: "Raw healthcare data landed from Fivetran"
+        columns:
+          - name: patient_id
+            description: "Unique patient identifier"
+          - name: visit_date
+            description: "Date of hospital visit"
+          - name: age_group
+            description: "Patient age group"
+          - name: gender
+            description: "Patient gender"
+          - name: region
+            description: "Hospital region"
+          - name: department
+            description: "Hospital department"
+          - name: treatment_type
+            description: "Type of treatment given"
+          - name: visit_type
+            description: "Type of visit"
+          - name: length_of_stay_days
+            description: "Number of days stayed"
+          - name: treatment_cost
+            description: "Cost of treatment"
+          - name: recovery_score
+            description: "Patient recovery score"
+          - name: readmission_risk
+            description: "Risk of readmission"
